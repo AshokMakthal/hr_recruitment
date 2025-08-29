@@ -13,17 +13,17 @@ import io
 
 
 # Load the spaCy model for English language processing
-try:
-    nlp = spacy.load("en_core_web_sm")
-    #Loads a small English language NLP model en_core_web_sm from spaCy 
-    #nlp is a variable that will noe hold a reday-to-use NLP pipeline
-except OSError:
-    print("Downloading spacy model...")
-    spacy.cli.download("en_core_web_sm")
-    #In spacy, spacy.cli is a module that contians functions
-    #you normally run from the terminal/command line
-    #Downloads the nlp model .Happens only once on the system 
-    nlp = spacy.load("en_core_web_sm") 
+# try:
+#     nlp = spacy.load("en_core_web_sm")
+#     #Loads a small English language NLP model en_core_web_sm from spaCy 
+#     #nlp is a variable that will noe hold a reday-to-use NLP pipeline
+# except OSError:
+#     print("Downloading spacy model...")
+#     spacy.cli.download("en_core_web_sm")
+#     #In spacy, spacy.cli is a module that contians functions
+#     #you normally run from the terminal/command line
+#     #Downloads the nlp model .Happens only once on the system 
+nlp = spacy.load("en_core_web_sm") 
     #Loads the model again after downloading ,so we can use it immediately 
 
 
