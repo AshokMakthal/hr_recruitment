@@ -1,4 +1,7 @@
 import spacy
+
+import pandas as pd 
+import spacy
 import streamlit as st
 
 @st.cache_resource
@@ -10,8 +13,9 @@ def load_spacy_model():
         spacy.cli.download("en_core_web_sm")
         return spacy.load("en_core_web_sm")
 
+# Load model once and reuse
 nlp = load_spacy_model()
-import pandas as pd 
+
 #Brings in Pandas for working with data tables(Dataframes)
 from agent_logic import(
     parse_resume_pdf_agent,
